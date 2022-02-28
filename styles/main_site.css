@@ -1,0 +1,35 @@
+:root{
+    font-family: 'Source Code Pro', monospace;
+}
+
+body{
+    background-color: #272e47;
+    color: #ced0d9;
+}
+
+header{
+    margin: 15px;
+}
+
+main{
+    margin: 20px;
+}
+
+.nice-btn{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1em;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+
+    /* border-color: #ced0d9; */
+    border-width: 0px;
+    border-radius: 20px;
+
+    background-color: #7b829b6c;
+    color: #ced0d9;
+}
+
+.nice-btn:hover{
+    
+    background-color: #7b829b9c;
+}
