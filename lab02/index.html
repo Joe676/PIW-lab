@@ -4,18 +4,24 @@
         <title>TuDu</title>
         <meta charset="UTF-8" >
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./index.js"></script>
         
+        <link rel="stylesheet" href="../styles/main_site.css">
         <link rel="stylesheet" href="../styles/todo.css">
     </head>
     <body>
-        <header>TuDu</header>
+        <h1>TuDu</h1>
         
         <div>
             <label for="new-todo"> Nowe TuDu </label>
+            <br>
             <input id="new-todo">
-            <button id="add-todo-btn" onclick="addTodo()"> Zapisz </button>
+            <button id="add-todo-btn" class="nice-btn" onclick="addTodo()"> Zapisz </button>
         </div>
         
         <h2>Do zrobienia:</h2>
@@ -25,7 +31,7 @@
 
         </ul>
 
-        <button id="untrash-btn" class="invisible" onclick="unTrash()">
+        <button id="untrash-btn" class="invisible nice-btn" onclick="unTrash()">
             Przywróć usunięte
         </button>
 
@@ -34,9 +40,12 @@
         </div>
 
         <div id="removing-modal" class="modal invisible">
-            Jesteś pewien, że nie dasz rady tego zrobić!?
-            <button id="in-modal-yes" onclick="yeaRemoveIt()">Ano</button>
-            <button id="in-modal-no" onclick="changedMyMind()">W sumie może dam...</button>
+            <p>
+                Jesteś pewien, że nie dasz rady tego zrobić!?
+            </p>
+            <br>
+            <button id="in-modal-yes" class="nice-btn yes" onclick="yeaRemoveIt()">Ano</button>
+            <button id="in-modal-no" class="nice-btn no" onclick="changedMyMind()">W sumie może dam...</button>
         </div>
 
     </body>

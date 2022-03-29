@@ -66,6 +66,7 @@ const addTodo = () => {
     newTodoVal.onclick = () => {setAsDone(newTodo.id);};
     
     removeBtn.innerHTML = "&times;"
+    removeBtn.classList.add("rmv-btn");
     removeBtn.onclick = () => {removeTodo(newTodo.id);}
     
     newTodo.append(newTodoVal);
