@@ -1,5 +1,4 @@
-#modal{
-    display: none;
+.modal{
     z-index: 1;
     position: fixed;
     background-color: rgba(0,0,0,0.6);
@@ -17,3 +16,4 @@
 .invisible {
     display: none;
 }
+

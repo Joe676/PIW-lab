@@ -1,6 +1,8 @@
 "use strict"
 
 let nextId = 1;
+let trash = null;
+let toRemove = null;
 
 const setAsDone = (id) => {
     // console.log(id)
@@ -13,9 +15,33 @@ const setAsDone = (id) => {
     
 };
 
+const changedMyMind = () => {
+    $("#removing-modal").toggle("invisible");
+}
+
+const yeaRemoveIt = () => {
+    toRemove.toggle("invisible");
+    if(trash!==null){
+        trash.remove();
+    }
+    else{
+        $("#untrash-btn").toggle("invisible", false);
+    }
+    trash = toRemove;
+    $("#removing-modal").toggle("invisible");
+}
+
 const removeTodo = (id) => {
-    $("#"+id).remove();
+    toRemove = $("#"+id);
+    $("#removing-modal").toggle("invisible");
+    
 };
+
+const unTrash = () => {
+    trash.toggle("invisible");
+    trash = null;
+    $("#untrash-btn").toggle("invisible", false);
+}
 
 const addTodo = () => {
     const newTodoText = document.getElementById("new-todo").value.trim();

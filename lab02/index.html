@@ -17,14 +17,27 @@
             <input id="new-todo">
             <button id="add-todo-btn" onclick="addTodo()"> Zapisz </button>
         </div>
-
+        
         <h2>Do zrobienia:</h2>
+        
+        
         <ul id="todo-list">
 
         </ul>
 
-        <div id="modal">
+        <button id="untrash-btn" class="invisible" onclick="unTrash()">
+            Przywróć usunięte
+        </button>
+
+        <div id="empty-todo-modal" class="modal invisible">
             Nowe tudu nie może być puste.
         </div>
+
+        <div id="removing-modal" class="modal invisible">
+            Jesteś pewien, że nie dasz rady tego zrobić!?
+            <button id="in-modal-yes" onclick="yeaRemoveIt()">Ano</button>
+            <button id="in-modal-no" onclick="changedMyMind()">W sumie może dam...</button>
+        </div>
+
     </body>
 </html>
