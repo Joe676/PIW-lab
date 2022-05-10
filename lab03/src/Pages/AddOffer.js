@@ -19,22 +19,24 @@ const AddOffer = (props) => {
         switch (event.target.id) {
             case 'name':
                 setName(event.target.value);
+                setNewStudentOffer(new StudentOffer(description, tmpTags.split(","), subject, new Student(event.target.value, mail)));
                 break;
         
             case 'mail':
                 setMail(event.target.value);
+                setNewStudentOffer(new StudentOffer(description, tmpTags.split(","), subject, new Student(name, event.target.value)));
                 break;
 
             case 'description':
                 setDescription(event.target.value);
+                setNewStudentOffer(new StudentOffer(event.target.value, tmpTags.split(","), subject, new Student(name, mail)));
                 break;
 
             case 'subject':
                 setSubject(event.target.value);
+                setNewStudentOffer(new StudentOffer(description, tmpTags.split(","), event.target.value, new Student(name, mail)));
                 break;
         }
-        setNewStudentOffer(new StudentOffer(description, tmpTags.split(","), subject, new Student(name, mail)));
-        console.log({newStudentOffer});
     }
 
     const handleTagsInput = (event) => {
@@ -48,27 +50,26 @@ const AddOffer = (props) => {
 
     const handleSave = (event) => {
         setOffers(offers.concat(newStudentOffer));
-        console.log(offers);
     }
 
     return (
         <>
-            <label htmlFor='name'>Imie</label>
-            <input id='name' value={name} onChange={handleNewStudentInput}></input>
+            <label htmlFor='name' className='add-element'>Imię:</label>
+            <input id='name' className='add-element' value={name} onChange={handleNewStudentInput}></input>
 
-            <label htmlFor='mail'>E-Mail</label>
-            <input id='mail' value={mail} onChange={handleNewStudentInput}></input>
+            <label htmlFor='mail' className='add-element'>E-Mail:</label>
+            <input id='mail' className='add-element' value={mail} onChange={handleNewStudentInput}></input>
             
-            <label htmlFor='description'>Opis</label>
-            <input id='description' value={description} onChange={handleNewStudentInput}></input>
+            <label htmlFor='description' className='add-element'>Opis:</label>
+            <input id='description' className='add-element' value={description} onChange={handleNewStudentInput}></input>
             
-            <label htmlFor='tags'>Tagi (rozdzielone przecinkami)</label>
-            <input id='tags' value={tmpTags} onChange={handleTagsInput}></input>
+            <label htmlFor='tags' className='add-element'>Tagi (rozdzielone przecinkami):</label>
+            <input id='tags' className='add-element' value={tmpTags} onChange={handleTagsInput}></input>
 
-            <label htmlFor='subject'>Przedmiot</label>
-            <input id='subject' value={subject} onChange={handleNewStudentInput}></input>
+            <label htmlFor='subject' className='add-element'>Przedmiot:</label>
+            <input id='subject' className='add-element' value={subject} onChange={handleNewStudentInput}></input>
 
-            <input type="button" value={"Zapisz"} onClick={handleSave}></input>
+            <input type="button" className='add-element nice-btn' value={"Zapisz"} onClick={handleSave}></input>
         </>
     );
 }

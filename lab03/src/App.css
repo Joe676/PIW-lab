@@ -23,6 +23,20 @@
   color: #61dafb;
 }
 
+li:not(.navelement){
+  padding: 2px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #414141;
+  border-style: solid;
+
+  background-color: #7b829b6c;
+  color: #ced0d9;
+}
+
 .offer-description {
   padding: 0px 10px;
   display: inline-block;
@@ -32,6 +46,7 @@
   padding: 0px 10px;
   display: inline-block;
   background-color: aqua;
+  color:#111;
 }
 
 .offer-tags{
@@ -46,7 +61,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(25, 30, 53);
 }
 
 .navelement {
@@ -63,5 +78,55 @@
 
 /* Change the link color to #111 (black) on hover */
 .navelement a:hover {
-  background-color: #111;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #272e47;
+}
+
+.group-members{
+  /* padding-left: .5em; */
+  margin: .2em .5em;
+}
+.group-member{
+  margin: 0em .2em;
+  padding: 0em .3em;
+  border: #111;
+  border-width: 1px;
+  border-style: dotted;
+  border-radius: .5em;
+}
+
+.add-element{
+  display: block;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.search-element{
+  margin: 0em .5em;
+}
+
+h2{
+  padding-left: 10px;
+}
+
+.nice-btn{
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1em;
+  padding: 5px 15px;
+  margin-bottom: 10px;
+
+  /* border-color: #ced0d9; */
+  border-width: 0px;
+  border-radius: 20px;
+
+  background-color: #7b829b6c;
+  color: #ced0d9;
+}
+
+.nice-btn:hover{
+  background-color: #7b829b9c;
+}
+
+.group-name, .student-name{
+  font-size: 1.3em;
 }
