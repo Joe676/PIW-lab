@@ -130,3 +130,15 @@ h2{
 .group-name, .student-name{
   font-size: 1.3em;
 }
+
+.navelement button{
+  margin-top: .5em;
+}
+
+.user-name{
+  margin: .5em .2em .2em .8em;
+  padding: .4em;
+  border: #111;
+  border-width: 2px;
+  border-style: solid;
+}

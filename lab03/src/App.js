@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import StudentOffer from './Models/StudentOffer';
 import { useState } from 'react';
@@ -10,6 +10,8 @@ import GroupOffers from './Pages/GroupOffers';
 import GroupOffer from './Models/GroupOffer';
 import Group from './Models/Group';
 import AddGroupOffers from './Pages/AddGroupOffer';
+import Login from './Pages/Login';
+import Logout from './Components/Logout';
 
 function App() {
   const [offers, setOffers] = useState([
@@ -30,14 +32,18 @@ function App() {
           <li className='navelement'><NavLink to='/add'>Dodaj Ofertę</NavLink></li>
           <li className='navelement'><NavLink to='/groups'>Oferty Grup</NavLink></li>
           <li className='navelement'><NavLink to='/groups/add'>Dodaj Ofertę Grupy</NavLink></li>
+          <li className='navelement'><NavLink to='/login'>Loguj</NavLink></li>
+          <li className='navelement'><Logout/></li>
         </ul>
         <Routes>
           <Route path="/" element={<Home offers={offers}/>}/>
           <Route path="/add" element={<AddOffer setOffers={setOffers} offers={offers} />}/>
           <Route path="/groups" element={<GroupOffers groupOffers={groupOffers}/>}/>
           <Route path="/groups/add" element={<AddGroupOffers offers={groupOffers} setOffers={setGroupOffers}/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </BrowserRouter>
+      {/* <Logout/> */}
     </div>
   );
 }
